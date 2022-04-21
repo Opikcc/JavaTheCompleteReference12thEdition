@@ -1,5 +1,8 @@
 package IntroducingClasses;
 
+/* Here, Box defines three constructors to initialize
+   the dimensions of a box various ways.
+*/
 class Box {
 
   double width;
