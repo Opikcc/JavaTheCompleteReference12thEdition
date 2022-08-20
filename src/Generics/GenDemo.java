@@ -1,5 +1,7 @@
 package Generics;
 
+import IntroducingClasses.Box;
+
 // Demonstrate the generic class.
 public class GenDemo {
   public static void main(String[] args) {
@@ -31,5 +33,18 @@ public class GenDemo {
     // that no cast is needed.
     String str = strOb.getOb();
     System.out.println("value: " + str);
+    
+    System.out.println();
+    
+    // Create a Gen object for Box.
+    Gen<Box> boxOb = new Gen<Box>(new Box());
+    
+    // Show the type of data used by boxOb.
+    boxOb.showType();
+    
+    // Get the value of boxOb. Again, notice
+    // that no cast is needed.
+    Box boxInstance = boxOb.getOb();
+    System.out.println("value: " + boxInstance.volume());
   }
 }

@@ -3,7 +3,7 @@ package IntroducingClasses;
 /* Here, Box defines three constructors to initialize
    the dimensions of a box various ways.
 */
-class Box {
+public class Box {
 
   double width;
   double height;
@@ -13,7 +13,7 @@ class Box {
    dimensions of a box.
   */
   // This is the constructor for Box.
-  Box() {
+  public Box() {
     System.out.println("Constructing Box");
     width = 10;
     height = 10;
@@ -24,19 +24,19 @@ class Box {
    initialize the dimensions of a box.
   */
   // This is the constructor for Box.
-  Box(double w, double h, double d) {
+  public Box(double w, double h, double d) {
     width = w;
     height = h;
     depth = d;
   }
 
   // compute and return volume
-  double volume() {
+  public double volume() {
     return width * height * depth;
   }
 
   // sets dimensions of box
-  void setDim(double w, double h, double d) {
+  public void setDim(double w, double h, double d) {
     width = w;
     height = h;
     depth= d;
