@@ -3,6 +3,7 @@ package Generics;
 // In this version of Stats, the type argument for
 // T must be either Number, or a class derived
 // from Number.
+// Use a wildcard.
 public class Stats<T extends Number> {
   T[] nums; // Array of Number or subclass
   
@@ -23,6 +24,8 @@ public class Stats<T extends Number> {
   }
   
   // Determine if two averages are the same.
+  // Notice the use of the wildcard.
+  // If not use wildcard ? parameter, isSameAvg can only applied to same type T object.
   boolean isSameAvg(Stats<?> ob) {
     if(average() == ob.average())
       return true;

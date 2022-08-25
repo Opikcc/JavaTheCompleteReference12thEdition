@@ -10,6 +10,11 @@ public class BoundsDemo {
     double v = iob.average();
     System.out.println("iob average is " + v);
 
+    Integer[] inums2 = {1, 2, 3, 4, 5};
+    Stats<Integer> iob2 = new Stats<Integer>(inums);
+    double v2 = iob2.average();
+    System.out.println("iob2 average is " + v2);
+
     Double[] dnums = {1.1, 2.2, 3.3, 4.4, 5.5};
     Stats<Double> dob = new Stats<Double>(dnums);
     double w = dob.average();
@@ -22,7 +27,7 @@ public class BoundsDemo {
 
     // See which arrays have same average.
     System.out.print("Averages of iob and dob ");
-    if (iob.isSameAvg(dob)) {
+    if (iob.isSameAvg(iob2)) {
       System.out.println("are the same.");
     } else {
       System.out.println("differ.");
@@ -34,10 +39,10 @@ public class BoundsDemo {
     } else {
       System.out.println("differ.");
     }
-    // This won't compile because String is not a
-    // subclass of Number.
-    // String[] strs = { "1", "2", "3", "4", "5" };
-    // Stats<String> strob = new Stats<String>(strs);
+//     This won't compile because String is not a
+//     subclass of Number.
+//     String[] strs = { "1", "2", "3", "4", "5" };
+//     Stats<String> strob = new Stats<String>(strs);
 
     // double x = strob.average();
     // System.out.println("strob average is " + x);
